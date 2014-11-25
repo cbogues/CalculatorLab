@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cooking Calculator</title>
+	<title>Calculators Galore</title>
+	<script type="text/javascript" src="main.js"></script>
 
 </head>
-<!-- Functions are on JS page -->
-<script type="text/javascript" src= "main.js">
-
-
-	
-</script>
-
 <body>
-<!-- where the numbers go -->
-	<p> Please type a number below</p>
+	<p>Enter a Temperature and select the conversion.</p>
 	
-	<input id="c"> degrees Celsius<br>
-	equals<br>
-	<input id="f">degrees Farhrenheit<br>
+	<form id="results" name="tempForm">
 
-	<p> Please note that all numbers are rounded to the nearest integer
+	<input type="text" name="textTemp" id="textTemp" />
 
+	<br/>
+
+	<input type="radio" name="radTemp" value="FC"/>Fahrenheit to Celcius
+	<br/>
+	</form>
+
+	<input type="radio" name="radTemp" value="CF"/> Celcius to Fahrenheit
+	<button onclick="ConvertTemp();">Convert</button> 
+
+	
+	<div id="divResults"></div>
 </body>
 </html>
