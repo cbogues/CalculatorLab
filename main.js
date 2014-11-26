@@ -1,30 +1,74 @@
-var function ConvertTemp(){
-var textTemp = document.getElementById('textTemp').value;
-var radioTemp = document.getElementById('radioTemp');
-var formRadio = document.tempForm.radTemp;
-var fahrenheitToCelcius = '';
-var celciusToFahrenheit = '';
-var i ;
 
-if(textTemp == ''){
-alert("Please Enter Temprature");
-}
+var report = function () {
+	
+	var result = document.getElementById("result");
 
-for (i = 0; i < formRadio.length; i++) {
-if (formRadio[i].checked) {
+	var fToC = document.getElementById("f_to_c");
 
-if(formRadio[i].value == 'FC'){ 
+	var cToF = document.getElementById("c_to_f");
 
-//Convert Temperature from Fahrenheit To Celcius
-celciusToFahrenheit = (textTemp - 32) * (5 / 9);
-document.getElementById("results").innerHTML = textTemp + "°F = " +celciusToFahrenheit+ "°C";
-}
-if(formRadio[i].value == 'CF'){ 
+	var temperature = document.getElementById("temperature");
 
-//Convert Temperature from Celcius To Fahrenheit
-fahrenheitToCelcius = (textTemp * (9/5)) + 32;
-document.getElementById("results").innerHTML = textTemp + "°C= " +fahrenheitToCelcius+ "°F";
-			}
+	var convertToC = function() {
+			var f = Number(temperature.value);
+			return ((f - 32) / 1.8);
 		}
+
+		fToC.onclick = function() {
+		result.innerText = convertToC();
 	}
+
+	var converToF = function() {
+		var c = Number(temperature.value);
+		return ((f + 32) * 1.8);
+		}
+
+		cToF.onclick = function () {
+		result.innerText = convertToC();
+
+	}
+	// 		return Number(temperature.innerHTML) * ;
+	// }
+
+	// var fToC.onclick = function() {
+	// 		return temperature.innerHTML
+
+
+	// result.innerHTML = document.getElementById("temperature");
+	// }
+
+// =============
+
+	// document.getElementById("result").innerHTML = celsius 
+	// + "°C " + fahrenheit + "°F "
+	// };
+
+	// document.getElementById("f_to_c").onclick = function () {
+	// 	var f = document.getElementById("temperature".value
+	// 		function.report((f - 32) / 1.8, f);
+	// };
+
+	// document.getElementById("c_to_f").onclick = function () {
+	// 	var c = document.getElementById("temperature").value;
+	// 		function.report((c + 32) * 1.8, c);
+	// };	
 }
+
+report();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

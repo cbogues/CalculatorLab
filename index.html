@@ -2,26 +2,22 @@
 <html>
 <head>
 	<title>Calculators Galore</title>
-	<script type="text/javascript" src="main.js"></script>
 
 </head>
 <body>
-	<p>Enter a Temperature and select the conversion.</p>
+	<h1>Calculators that you didn't know you needed.</h1>
+
+	<h2>Temperature Conversion
+		<p>
+		<input type="text" id="temperature" />
+		
+		<input type= "button" id="f_to_c" value="F to C" />
+
+		<input type= "button" id="c_to_f" value="C to F" />
+		</p>
 	
-	<form id="results" name="tempForm">
+	<p id="result"></p>
 
-	<input type="text" name="textTemp" id="textTemp" />
-
-	<br/>
-
-	<input type="radio" name="radTemp" value="FC"/>Fahrenheit to Celcius
-	<br/>
-	</form>
-
-	<input type="radio" name="radTemp" value="CF"/> Celcius to Fahrenheit
-	<button onclick="ConvertTemp();">Convert</button> 
-
-	
-	<div id="divResults"></div>
+	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
